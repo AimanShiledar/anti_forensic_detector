@@ -1,0 +1,33 @@
+{
+  "dataset": "scenario_1_normal_history",
+  "simulated": true,
+  "entries": [
+    {
+      "entry_id": "NH-001",
+      "sequence": 1,
+      "timestamp": "2026-10-18T13:01:00Z",
+      "command": "whoami",
+      "host": "WORKSTATION-DEMO",
+      "history_path": "/demo/workspace/monitored/.bash_history",
+      "simulated": true
+    },
+    {
+      "entry_id": "NH-002",
+      "sequence": 2,
+      "timestamp": "2026-10-18T13:02:00Z",
+      "command": "dir",
+      "host": "WORKSTATION-DEMO",
+      "history_path": "/demo/workspace/monitored/.bash_history",
+      "simulated": true
+    },
+    {
+      "entry_id": "NH-003",
+      "sequence": 3,
+      "timestamp": "2026-10-18T13:03:00Z",
+      "command": "type README.md",
+      "host": "WORKSTATION-DEMO",
+      "history_path": "/demo/workspace/monitored/.bash_history",
+      "simulated": true
+    }
+  ]
+}

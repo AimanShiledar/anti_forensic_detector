@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-18T17:05:26+00:00",
+  "algorithm": "SHA-256",
+  "trusted_reference": true,
+  "limitation": "An attacker who can modify both the monitored file and the baseline manifest can evade this check.",
+  "files": [
+    {
+      "path": "C:\\Users\\shile\\Desktop\\anti_forensics_detector\\workspace\\demo_files\\sample_monitored.txt",
+      "sha256": "b95da35b59998e5a3a2bafbc020bbca7299c58576caf13f6a1a11be0782d6da1",
+      "size_bytes": 128
+    }
+  ]
+}

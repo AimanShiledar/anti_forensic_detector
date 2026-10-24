@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "clock_skew_seconds": 300,
+  "correlation": {
+    "window_seconds": 900,
+    "require_shared_context": true,
+    "shared_context_fields": ["related_path", "host", "evidence_ref"],
+    "min_findings": 2,
+    "min_distinct_modules": 2,
+    "score_bonus_per_extra_module": 4,
+    "priority_thresholds": {
+      "CRITICAL": 20,
+      "HIGH": 12,
+      "MEDIUM": 7,
+      "LOW": 3,
+      "INFORMATIONAL": 0
+    }
+  },
+  "severity_points": {
+    "INFORMATIONAL": 1,
+    "LOW": 2,
+    "MEDIUM": 4,
+    "HIGH": 7,
+    "CRITICAL": 10
+  },
+  "log_detector": {
+    "explicit_clear_event_types": [
+      "EVENTLOG_CLEARED",
+      "AUDIT_LOG_CLEARED",
+      "SYSLOG_ROTATED_AND_WIPED",
+      "JOURNAL_VACUUM_UNUSUAL"
+    ],
+    "log_file_deleted_event_types": [
+      "MONITORED_LOG_FILE_DELETED",
+      "LOG_PATH_REMOVED"
+    ],
+    "logging_config_event_types": [
+      "LOGGING_SERVICE_STOPPED",
+      "AUDIT_POLICY_DISABLED",
+      "SYSLOG_FORWARDING_DISABLED"
+    ],
+    "repeat_threshold": 3,
+    "repeat_window_seconds": 600
+  },
+  "history_detector": {
+    "clear_event_types": [
+      "HISTORY_CLEARED",
+      "HISTFILE_TRUNCATED",
+      "SHELL_HISTORY_WIPED"
+    ],
+    "clear_command_patterns": [
+      "history -c",
+      "history -w",
+      "cat /dev/null >",
+      "> ~/.bash_history",
+      "Clear-History"
+    ],
+    "max_expected_sequence_gap": 1
+  },
+  "timestamp_detector": {
+    "flag_future_timestamps": true,
+    "flag_created_after_modified": true,
+    "flag_baseline_mtime_change": true,
+    "ignore_atime_only_changes": true
+  }
+}

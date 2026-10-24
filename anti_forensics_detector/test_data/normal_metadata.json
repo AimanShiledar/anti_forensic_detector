@@ -1,0 +1,15 @@
+{
+  "dataset": "scenario_1_normal_metadata",
+  "simulated": true,
+  "records": [
+    {
+      "record_id": "NM-001",
+      "path": "/demo/workspace/monitored/app.log",
+      "host": "WORKSTATION-DEMO",
+      "created": "2026-10-01T09:00:00Z",
+      "modified": "2026-10-18T12:00:00Z",
+      "accessed": "2026-10-18T13:00:00Z",
+      "simulated": true
+    }
+  ]
+}

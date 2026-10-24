@@ -1,0 +1,50 @@
+{
+  "dataset": "synthetic_timestamp_metadata",
+  "simulated": true,
+  "description": "Synthetic file metadata. Not harvested from a production volume.",
+  "records": [
+    {
+      "record_id": "M-NORMAL",
+      "path": "/demo/workspace/monitored/readme.txt",
+      "host": "WORKSTATION-DEMO",
+      "created": "2026-10-01T09:00:00Z",
+      "modified": "2026-10-10T12:00:00Z",
+      "accessed": "2026-10-18T13:00:00Z",
+      "simulated": true
+    },
+    {
+      "record_id": "M-ORDER",
+      "path": "/demo/workspace/monitored/app.log",
+      "host": "WORKSTATION-DEMO",
+      "created": "2026-10-18T14:06:00Z",
+      "modified": "2026-10-18T10:00:00Z",
+      "accessed": "2026-10-18T14:06:05Z",
+      "event_time": "2026-10-18T14:06:00Z",
+      "independent_event_time": "2026-10-18T14:30:00Z",
+      "baseline_mtime": "2026-10-18T10:00:00Z",
+      "simulated": true
+    },
+    {
+      "record_id": "M-FUTURE",
+      "path": "/demo/workspace/monitored/future.dat",
+      "host": "WORKSTATION-OTHER",
+      "created": "2026-12-01T00:00:00Z",
+      "modified": "2026-12-01T00:00:00Z",
+      "simulated": true
+    },
+    {
+      "record_id": "M-MISSING",
+      "path": "/demo/workspace/monitored/no-times.bin",
+      "host": "WORKSTATION-DEMO",
+      "simulated": true
+    },
+    {
+      "record_id": "M-BADTS",
+      "path": "/demo/workspace/monitored/broken.txt",
+      "host": "WORKSTATION-DEMO",
+      "created": "not-a-timestamp",
+      "modified": "2026-10-18T11:00:00Z",
+      "simulated": true
+    }
+  ]
+}

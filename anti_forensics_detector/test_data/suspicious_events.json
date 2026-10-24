@@ -1,0 +1,54 @@
+{
+  "dataset": "scenario_2_and_5_synthetic_anti_forensic_indicators",
+  "simulated": true,
+  "description": "Synthetic events for demonstration. Do not present as live evidence.",
+  "events": [
+    {
+      "event_id": "S-101",
+      "timestamp": "2026-10-18T14:05:00Z",
+      "event_type": "EVENTLOG_CLEARED",
+      "source": "Security",
+      "description": "Windows Security event log was cleared by user demo-tempadmin",
+      "severity": "warning",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "simulated": true
+    },
+    {
+      "event_id": "S-102",
+      "timestamp": "2026-10-18T14:06:10Z",
+      "event_type": "LOGGING_SERVICE_STOPPED",
+      "source": "System",
+      "description": "Event log service stopped outside a documented maintenance window",
+      "severity": "warning",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "simulated": true
+    },
+    {
+      "event_id": "S-103",
+      "timestamp": "2026-10-18T14:07:00Z",
+      "event_type": "MONITORED_LOG_FILE_DELETED",
+      "source": "FileAudit",
+      "description": "Monitored log file removed from demo workspace path",
+      "severity": "high",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "simulated": true
+    },
+    {
+      "event_id": "S-104",
+      "timestamp": "2026-10-18T14:20:00Z",
+      "event_type": "EXPECTED_EVENT_CHECK",
+      "source": "Collector",
+      "description": "Heartbeat event expected from collector was not present",
+      "severity": "info",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "expected_event_id": "HEARTBEAT-14:15",
+      "expected_event_present": false,
+      "baseline_coverage": "sufficient",
+      "simulated": true
+    }
+  ]
+}

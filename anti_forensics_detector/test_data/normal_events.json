@@ -1,0 +1,40 @@
+{
+  "dataset": "scenario_1_normal_activity",
+  "simulated": true,
+  "description": "Synthetic routine events. Not collected from a live compromised host.",
+  "events": [
+    {
+      "event_id": "N-001",
+      "timestamp": "2026-10-18T13:00:00Z",
+      "event_type": "USER_LOGIN",
+      "source": "Security",
+      "description": "Interactive logon for analyst.j on WORKSTATION-DEMO",
+      "severity": "info",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "simulated": true
+    },
+    {
+      "event_id": "N-002",
+      "timestamp": "2026-10-18T13:05:00Z",
+      "event_type": "SERVICE_START",
+      "source": "System",
+      "description": "Logging service started normally",
+      "severity": "info",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "simulated": true
+    },
+    {
+      "event_id": "N-003",
+      "timestamp": "2026-10-18T13:10:00Z",
+      "event_type": "FILE_READ",
+      "source": "Audit",
+      "description": "Authorized read of application log",
+      "severity": "info",
+      "host": "WORKSTATION-DEMO",
+      "related_path": "/demo/workspace/monitored/app.log",
+      "simulated": true
+    }
+  ]
+}
